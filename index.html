@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="192x192" href="uol_icone.png" />
+    <title> Bate-Papo Uol </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap" >
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="stylesheet" href="Layout.css">
+</head>
+<body>
+    <div class="Apagavel">
+        <div class="login-screen">
+            <img      class="iconeUolLogin" src="logo1.png" alt="Ícone Uol">
+            <div class="dados-entrada">
+                <input class="Login-nome" placeholder="Digite Seu Nome" type="text">
+                <button onclick="Pegar_nome()" class="Login-botao"> Entrar </button>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="cabeçalho">
+        <img      class="iconeUol" src="logo1.png" alt="Ícone Uol">
+        <ion-icon class="lista-pessoas" name="people"></ion-icon>
+    </div>
+    <div class="espaco-variavel">
+        
+    </div>
+    <div class="rodape">
+        <input placeholder="Escreva aqui..." class="msg-space" type="text">
+        <ion-icon class="Envia-msg" name="paper-plane-outline"></ion-icon>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="funcionalidade.js"></script>
+</body>
+</html>

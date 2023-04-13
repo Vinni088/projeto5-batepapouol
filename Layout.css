@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3F3F3;
+}
+.escondido {
+    display: none;
+}
+/* Configs tela inicial de Login */
+.login-screen {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 70px;
+    gap: 90px;
+
+    z-index: 3;
+}
+.iconeUolLogin {
+    width: 130px;
+    height: 92px;
+}
+.dados-entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.Login-nome {
+    width: 261px;
+    height: 54px;
+    
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #AEAEAE;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+.Login-botao {
+    width: 109px;
+    height: 45px;
+    
+    background: #E7E7E7;
+    border: 0px;
+    border-radius: 9px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    
+    color: #696969;
+}
+.gif-aguardo {
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+}
+
+.gif-aguardo img {
+    width: 100px;
+    height: 100px;
+}
+.gif-aguardo p {
+    text-align: center;
+}
+/* Configs tela principal */
+.cabeçalho {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    padding: 22px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    bottom: 0px;
+    padding: 18px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lista-pessoas {
+    width: 45px;
+    height: 45px;
+    color: black;
+}
+
+.iconeUol {
+    width: 75px;
+    height: 53px;
+}
+
+.msg-space {
+    width: 245px;
+    height: 30px;
+    
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    border: 0px solid white;
+    
+    color: #000000;
+}
+
+.Envia-msg {
+    width: 26px;
+    height: 26px;
+}
