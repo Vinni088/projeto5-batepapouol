@@ -16,12 +16,9 @@
     <div class="Apagavel">
         <div class="login-screen">
             <img      class="iconeUolLogin" src="logo1.png" alt="Ícone Uol">
-            <div>
-                <form class="dados-entrada" onsubmit="Pegar_nome()">
-                    <input class="Login-nome" placeholder="Digite Seu Nome" type="text">
-                    <input  type="submit" value="" hidden />
-                    <button onclick="Pegar_nome()" class="Login-botao"> Entrar </button>
-                </form>
+            <div class="dados-entrada">
+                <input data-test="input-name" class="Login-nome" placeholder="Digite Seu Nome" type="text">
+                <button data-test="send-name" onclick="Pegar_nome()" class="Login-botao"> Entrar </button>
             </div>
         </div>    
     </div>
@@ -30,14 +27,15 @@
         <img      class="iconeUol" src="logo1.png" alt="Ícone Uol">
         <ion-icon class="lista-pessoas" name="people"></ion-icon>
     </div>
+
     <div class="espaco-variavel">
         <ul class="Mensagens">
 
         </ul>
     </div>
     <div class="rodape">
-        <input placeholder="Escreva aqui..." class="msg-space" type="text">
-        <ion-icon class="Envia-msg" name="paper-plane-outline"></ion-icon>
+        <input data-test="input-message" placeholder="Escreva aqui..." class="msg-space" type="text">
+        <ion-icon data-test="send-message" class="Envia-msg" onclick="enviar_msg()" name="paper-plane-outline"></ion-icon>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
