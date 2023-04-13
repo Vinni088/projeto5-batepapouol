@@ -99,12 +99,15 @@ let msg = {
 };
 const msg_space = document.querySelector('.msg-space');
 
+function recarregue() {
+    window.location.reload();
+}
 function enviar_msg() {
     msg.text = msg_space.value ;
     msg.from = nickname.name
     const promisse_enviar = axios.post('https://mock-api.driven.com.br/api/vm/uol/messages', msg);
     promisse_enviar.then(console.log("msg enviada :)"));
-    promisse_enviar.catch(location.reload);
+    promisse_enviar.catch(recarregue);
 }
 
 msg_space.addEventListener('keypress', function (e) {
