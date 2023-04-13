@@ -83,7 +83,6 @@ body {
     height: 200px;
     gap: 20px;
 }
-
 .gif-aguardo img {
     width: 100px;
     height: 100px;
@@ -92,6 +91,7 @@ body {
     text-align: center;
 }
 /* Configs tela principal */
+/* Configs do cabeçalho */
 .cabeçalho {
     position: fixed;
     width: 100%;
@@ -107,7 +107,16 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+.iconeUol {
+    width: 75px;
+    height: 53px;
+}
+.lista-pessoas {
+    width: 45px;
+    height: 45px;
+    color: black;
+}
+/* Configs do rodapé */
 .rodape {
     position: fixed;
     width: 100%;
@@ -123,18 +132,6 @@ body {
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
-
-.lista-pessoas {
-    width: 45px;
-    height: 45px;
-    color: black;
-}
-
-.iconeUol {
-    width: 75px;
-    height: 53px;
-}
-
 .msg-space {
     width: 245px;
     height: 30px;
@@ -150,8 +147,16 @@ body {
     
     color: #000000;
 }
-
 .Envia-msg {
     width: 26px;
     height: 26px;
+}
+/* Configs do espaço principal de msgs */
+.espaco-variavel {
+    height: 600px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    border: 1px blue solid;
 }

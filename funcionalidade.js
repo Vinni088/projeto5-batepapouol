@@ -3,10 +3,15 @@ axios.defaults.headers.common['Authorization'] = 'GkALFw66QN0rVzaxxtU97AfA';
 let nickname = {
     name: ""
 };
+function manter_online () {
+    const promisse_online = axios.post('https://mock-api.driven.com.br/api/vm/uol/status' , nickname);
+    promisse_online.then(console.log('mantendo online'));
+}
 function login_positivo(resposta) {
-    console.log(resposta);
     const tela_login = document.querySelector(".Apagavel");
     tela_login.innerHTML = "";
+    console.log(resposta);
+    setInterval(manter_online, 5000);
 }
 function login_negativo(resposta) {
     console.log("deu errado");

@@ -16,9 +16,12 @@
     <div class="Apagavel">
         <div class="login-screen">
             <img      class="iconeUolLogin" src="logo1.png" alt="Ícone Uol">
-            <div class="dados-entrada">
-                <input class="Login-nome" placeholder="Digite Seu Nome" type="text">
-                <button onclick="Pegar_nome()" class="Login-botao"> Entrar </button>
+            <div>
+                <form class="dados-entrada" onsubmit="Pegar_nome()">
+                    <input class="Login-nome" placeholder="Digite Seu Nome" type="text">
+                    <input  type="submit" value="" hidden />
+                    <button onclick="Pegar_nome()" class="Login-botao"> Entrar </button>
+                </form>
             </div>
         </div>    
     </div>
@@ -28,7 +31,9 @@
         <ion-icon class="lista-pessoas" name="people"></ion-icon>
     </div>
     <div class="espaco-variavel">
-        
+        <ul class="Mensagens">
+
+        </ul>
     </div>
     <div class="rodape">
         <input placeholder="Escreva aqui..." class="msg-space" type="text">
