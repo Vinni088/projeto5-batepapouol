@@ -12,9 +12,12 @@ espaço_login.addEventListener('keypress', function (e) {
         espaço_login.value = ""
     }
 });
+let participantes = [];
+const promisse_lista_participantes = axios.get('https://mock-api.driven.com.br/api/vm/uol/participants');
+promisse_lista_participantes.then(analise_participantes);
 
-function exiba(resposta) {
-    console.log(resposta)
+function analise_participantes(resposta) {
+    participantes = resposta.data;
 }
 function manter_online () {
     const promisse_online = axios.post('https://mock-api.driven.com.br/api/vm/uol/status' , nickname);
@@ -46,7 +49,7 @@ function cheque_mensagens() {
     promisse_msgs.then(print_msgs);
     //promisse_msgs.then(exiba); 
 }
-function login_positivo(resposta) {
+function login_positivo() {
     const tela_login = document.querySelector(".Apagavel");
     tela_login.innerHTML = "";
     console.log("login positivo");
@@ -58,22 +61,34 @@ function login_negativo(resposta) {
     console.log(resposta);
 }
 function Enviar_nome() {
+    const tela_login = document.querySelector(".login-screen");
+    tela_login.innerHTML = "";
+    tela_login.innerHTML += 
+        `<img class="iconeUolLogin" src="logo1.png" alt="Ícone Uol">
+            <div class="gif-aguardo ">
+                <img src="Loading.gif" alt="Carregando">
+                <p> Entrando... </p> 
+            </div>`;
     const promessa_entrada = axios.post('https://mock-api.driven.com.br/api/vm/uol/participants', nickname)
     promessa_entrada.then(login_positivo);
     promessa_entrada.catch(login_negativo);
 }
+let contador = 0;
 function Pegar_nome() {
-    const espaço_nome = document.querySelector(".Login-nome");
-    nickname.name = espaço_nome.value;
-    const tela_login = document.querySelector(".login-screen");
-    tela_login.innerHTML = "";
-    tela_login.innerHTML += 
-    `<img class="iconeUolLogin" src="logo1.png" alt="Ícone Uol">
-     <div class="gif-aguardo ">
-         <img src="Loading.gif" alt="Carregando">
-         <p> Entrando... </p> 
-     </div>`;
-    Enviar_nome(nickname);
+    let espaço_nome = document.querySelector(".Login-nome");
+    let nome_teste = espaço_nome.value;
+    for (let i = 0; i < participantes.length; i++) {
+        if (participantes[i].name === nome_teste) {
+            alert("Nome Inválido, Tente outro nome");
+            espaço_login.value = "";
+        } else {
+            contador++;
+        }
+        if (contador == participantes.length) {
+            nickname.name = espaço_nome.value;
+            Enviar_nome();
+        }
+    }
 }
 //Configs para: Enviar mensagens
 let msg = {
@@ -89,6 +104,7 @@ function enviar_msg() {
     msg.from = nickname.name
     const promisse_enviar = axios.post('https://mock-api.driven.com.br/api/vm/uol/messages', msg);
     promisse_enviar.then(console.log("msg enviada :)"));
+    promisse_enviar.catch(window.location.reload());
 }
 
 msg_space.addEventListener('keypress', function (e) {
