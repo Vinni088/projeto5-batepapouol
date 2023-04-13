@@ -104,7 +104,7 @@ function enviar_msg() {
     msg.from = nickname.name
     const promisse_enviar = axios.post('https://mock-api.driven.com.br/api/vm/uol/messages', msg);
     promisse_enviar.then(console.log("msg enviada :)"));
-    promisse_enviar.catch(window.location.reload);
+    promisse_enviar.catch(location.reload);
 }
 
 msg_space.addEventListener('keypress', function (e) {
