@@ -38,7 +38,9 @@ function print_msgs(resposta) {
         if (mensagens[i].type === "message") {
             espaço_para_mensagens.innerHTML += `
             <li data-test="message" class="msg-text">
-            <span> (${mensagens[i].time}) </span> <strong> ${mensagens[i].from}</strong> para <strong>${mensagens[i].to}:</strong> ${mensagens[i].text}
+                <span class="cinza"> (${mensagens[i].time})</span> 
+                <strong> ${mensagens[i].from}</strong> para 
+                <strong> ${mensagens[i].to}:</strong> <span class="mensagem_text" > ${mensagens[i].text} </span> 
             </li>
             `
         }
