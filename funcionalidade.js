@@ -40,7 +40,7 @@ function print_msgs(resposta) {
             <li data-test="message" class="msg-text">
                 <span class="cinza"> (${mensagens[i].time})</span> 
                 <strong> ${mensagens[i].from}</strong> para 
-                <strong> ${mensagens[i].to}:</strong> <span class="mensagem_text" > ${mensagens[i].text} </span> 
+                <strong> ${mensagens[i].to}:</strong> ${mensagens[i].text}
             </li>
             `
         }

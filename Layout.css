@@ -41,12 +41,11 @@ body {
 .Login-nome {
     width: 261px;
     height: 54px;
-    
     background: #FFFFFF;
     border: 1px solid #D7D7D7;
     border-radius: 4px;
 
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -66,7 +65,7 @@ body {
     border: 0px;
     border-radius: 9px;
 
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -136,7 +135,7 @@ body {
     width: 245px;
     height: 30px;
     
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 18px;
@@ -164,7 +163,7 @@ body {
     border-radius: 2px;
     padding: 7.5px;
     padding-top: 10px; 
-    
+
     word-wrap: break-word;
 }
 .msg-status {
