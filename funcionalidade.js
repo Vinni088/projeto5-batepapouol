@@ -1,4 +1,4 @@
-axios.defaults.headers.common['Authorization'] = 'GkALFw66QN0rVzaxxtU97AfA';
+axios.defaults.headers.common['Authorization'] = 'nuyTwtCpgWNbJvaNSSgr6jgJ';
 
 //Configs para: Login, Manter-se On, Manter as msgs atualizadas
 let nickname = {
@@ -90,6 +90,10 @@ function Pegar_nome() {
             nickname.name = espaço_nome.value;
             Enviar_nome();
         }
+    }
+    if (participantes.length == 0) {
+        nickname.name = espaço_nome.value;
+        Enviar_nome();
     }
 }
 //Configs para: Enviar mensagens
